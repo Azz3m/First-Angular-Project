@@ -14,15 +14,19 @@
     <title>First AngularJS</title>
 
   </head>
-  <body>
+  <body ng-app="NameClacASCII">
     <h1>Hello, Guys!</h1>
-    <div>
+    <div ng-controller= "NameClacASCIIContoller">
       <div>
         Your name :
-        <input type="text" />
+        <input
+        type="text"
+        ng-model="name;"
+        ng-keyup="displayNumeric();"
+         />
       </div>
       <div>
-        Your value of ur name in ASCII is :
+        Your value of ur name in ASCII is : {{valueInNumeric}}
 
       </div>
     </div>
